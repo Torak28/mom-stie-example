@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <Navbar v-bind:json='json'/>
-    <h1>Lorem Ipsum</h1>
-    <Text1 v-bind:json='json.textToDisplay1'/>
-    <Text2 v-bind:json='json.textToDisplay2'/>
+    <b-container>
+      <Navbar v-bind:json='json'/>
+      <h1>Żółć ąęźżćś</h1>
+      <Text1 v-bind:json='json.textToDisplay1'/>
+      <Text2 v-bind:json='json.textToDisplay2'/>
+    </b-container>
   </div>
 </template>
 
@@ -31,8 +33,11 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  padding: 2rem;
+  margin: auto;
+  background: #fafafa;
 }
 </style>
