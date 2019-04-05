@@ -2,7 +2,7 @@
     <div id='Text2'>
         <div class='text'>
             <h2>{{json.name}}</h2>
-            <h3>{{json.text}}</h3>
+            {{json.text}}
         </div>
     </div>
 </template>
