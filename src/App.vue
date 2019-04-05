@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h1>Przykładowa Strona</h1>
-    <Text1 v-bind:textToDisplay1='textToDisplay1'/>
-    <Text2 v-bind:textToDisplay2='textToDisplay2'/>
+    <h1>Lorem Ipsum</h1>
+    <Text1 v-bind:json='json.textToDisplay1'/>
+    <Text2 v-bind:json='json.textToDisplay2'/>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 import Text1 from './components/Text1.vue'
 import Text2 from './components/Text2.vue'
 
+import json from './json/data.json'
 
 export default {
   name: 'app',
@@ -19,14 +20,7 @@ export default {
   },
   data() {
     return {
-      textToDisplay1 : {
-          id : 1,
-          text : 'Przykładowy tekst do wyświetlenia'
-        },
-      textToDisplay2 : {
-          id : 2,
-          text : 'Inny tekst do wyświetlenia'
-        }
+      json
     }
   }
 }
