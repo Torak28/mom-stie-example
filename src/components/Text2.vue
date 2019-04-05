@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <div>
+    <div id='Text2'>
+        <div class='text'>
+            <h2>{{json.name}}</h2>
             <h3>{{json.text}}</h3>
         </div>
     </div>
@@ -15,6 +16,9 @@ export default {
 
 
 <style scope>
-
+    .text {
+        text-align: justify;
+        text-justify: inter-word;
+    }
 </style>
 

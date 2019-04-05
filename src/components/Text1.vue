@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div id='Text1'>
         <div class='text'>
+            <h2>{{json.name}}</h2>
             <h3>{{json.text}}</h3>
         </div>
     </div>
