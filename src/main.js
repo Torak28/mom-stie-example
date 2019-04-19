@@ -5,7 +5,11 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+var VueScrollTo = require('vue-scrollto');
+
 Vue.use(BootstrapVue)
+Vue.use(VueScrollTo)
+
 
 Vue.config.productionTip = false
 
