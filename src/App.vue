@@ -14,7 +14,14 @@
             </b-collapse>
         </b-navbar>
 
+      <br>
+      <br>
+
       <Text1 v-bind:json='json.textToDisplay1'/>
+
+      <br>
+      <br>
+
       <Text2 v-bind:json='json.textToDisplay2'/>
     </b-container>
   </div>

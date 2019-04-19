@@ -22,3 +22,7 @@ yarn-error.log*
 
 #data
 src/json
+
+#assets
+src/assets/Mama.png
+src/assets/Przykład1.png
