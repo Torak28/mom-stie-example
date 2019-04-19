@@ -10,6 +10,8 @@
             <b-navbar-nav class="ml-auto">
                 <b-nav-item href="#Text1" v-scroll-to="{el: '#Text1', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
                 <b-nav-item href="#Text2" v-scroll-to="{el: '#Text2', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
+                <b-nav-item href="#Text2" >Oferta</b-nav-item>
+                <b-nav-item href="#Text2" >Kontakt</b-nav-item>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>
