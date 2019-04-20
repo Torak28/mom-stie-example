@@ -92,11 +92,5 @@ export default {
         max-width: 100%;
         height: auto;
     }
-    .test{
-        background: #ff0000 !important; 
-    }
-    .test2{
-        background: #002fff !important; 
-    }
 </style>
 
