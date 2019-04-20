@@ -1,15 +1,15 @@
 <template>
-    <div class="container" id='Help'>
-        <div class='text row justify-content-end'>
-            <div class='col-8'>
+    <b-container id='Help'>
+        <b-row class='justify-content-end'>
+            <b-col md='8'>
                 <h1>{{json.name}}</h1>
-            </div>
-        </div>
-        <div class='text row'>
-            <div class='col-4 align-self-center'>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col md='4' class='align-self-center'>
                 <img src="../assets/Przykład1.png" alt="Logo">
-            </div>
-             <div class='col-8'>
+            </b-col>
+            <b-col md='8' class='text'>
                  {{json.text1}}
                 <br>
                 <br>
@@ -20,9 +20,9 @@
                 <br>
                 <br>
                 {{json.text4}}
-            </div>
-        </div>
-    </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>

@@ -1,22 +1,22 @@
 <template>
-    <div class="container" id='About'>
-        <div class='text row'>
-            <div class='col'>
+    <b-container id='About'>
+        <b-row class='text'>
+            <b-col>
                 <h1>{{json.name}}</h1>
-            </div>
-        </div>
-        <div class='text row'>
-            <div class='col-8'>
+            </b-col>
+        </b-row>
+        <b-row class='text'>
+            <b-col md='8' order='2' order-md='1'>
                 {{json.text1}}
                 <br>
                 <br>
                 {{json.text2}}
-            </div>
-            <div class='col-4 align-self-center'>
-                <img src="../assets/Mama.png" alt="Logo">
-            </div>
-        </div>
-    </div>
+            </b-col>
+            <b-col md='4' class='align-self-center' order='1' order-md='2'>
+                <img src='../assets/Mama.png' alt='Logo'>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
