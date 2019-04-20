@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id='Text1'>
+    <div class="container" id='About'>
         <div class='text row'>
             <div class='col'>
                 <h1>{{json.name}}</h1>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-    name: 'Text1',
+    name: 'About',
     props: ['json']
 }
 </script>

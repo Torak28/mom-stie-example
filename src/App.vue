@@ -8,10 +8,10 @@
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <b-nav-item href="#Text1" v-scroll-to="{el: '#Text1', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
-                <b-nav-item href="#Text2" v-scroll-to="{el: '#Text2', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
-                <b-nav-item href="#Text2" >Oferta</b-nav-item>
-                <b-nav-item href="#Text2" >Kontakt</b-nav-item>
+                <b-nav-item href="#About" v-scroll-to="{el: '#About', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
+                <b-nav-item href="#Help" v-scroll-to="{el: '#Help', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
+                <b-nav-item href="#Help" >Oferta</b-nav-item>
+                <b-nav-item href="#Help" >Kontakt</b-nav-item>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -19,27 +19,27 @@
       <br>
       <br>
 
-      <Text1 v-bind:json='json.textToDisplay1'/>
+      <About v-bind:json='json.textToDisplay1'/>
 
       <br>
       <br>
 
-      <Text2 v-bind:json='json.textToDisplay2'/>
+      <Help v-bind:json='json.textToDisplay2'/>
     </b-container>
   </div>
 </template>
 
 <script>
-import Text1 from './components/Text1.vue'
-import Text2 from './components/Text2.vue'
+import About from './components/About.vue'
+import Help from './components/Help.vue'
 
 import json from './json/data.json'
 
 export default {
   name: 'app',
   components: {
-    Text1,
-    Text2
+    About,
+    Help
   },
   data() {
     return {
