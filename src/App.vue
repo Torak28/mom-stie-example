@@ -41,7 +41,7 @@
         <gmap-map
           :center= "center"
           :zoom= "zoom"
-          style="width:100%;  height: 400px;">
+          style="width:100%;  height: 600px;">
         
         <gmap-marker
           :position.sync=markerPos
@@ -52,6 +52,9 @@
     </b-row>
 
     </b-container>
+    <footer>
+      <cookie-law :buttonText=json.cookieButton :message=json.cookieMessage theme="base"></cookie-law>
+    </footer>
   </div>
 </template>
 
@@ -63,13 +66,16 @@ import Contact from './components/Contact.vue'
 
 import json from './json/data.json'
 
+import CookieLaw from 'vue-cookie-law'
+
 export default {
   name: 'app',
   components: {
     About,
     Help,
     Ofer,
-    Contact
+    Contact,
+    CookieLaw
   },
   data() {
     return {
