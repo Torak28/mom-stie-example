@@ -59,7 +59,13 @@
                 <br>
                 <font-awesome-icon icon="envelope" /> {{json.text3}}
                 <br>
-                <font-awesome-icon icon="phone" /> {{json.text2}}</h5>
+                <font-awesome-icon icon="phone" /> {{json.text2}}
+                <br>
+                <br>
+                <br>
+                {{json.text4}}
+                <br>
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text5}}</h5>
             </b-col>
         </b-row>
     </b-container>

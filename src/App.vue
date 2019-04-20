@@ -31,8 +31,21 @@
 
       <Contact v-bind:json='json.textToDisplay4'/>
 
-      <google-map />
-      <!--GmapMap :center="{ lat: 10, lng: 10 }"-->
+      <br>
+
+      <b-row class='text-center'>
+        <gmap-map
+          :center= "center"
+          :zoom= "zoom"
+          style="width:100%;  height: 400px;">
+        
+        <gmap-marker
+          :position.sync=markerPos
+          :clickable="true">
+        </gmap-marker>
+        </gmap-map>
+        
+    </b-row>
 
     </b-container>
   </div>
@@ -42,7 +55,6 @@
 import About from './components/About.vue'
 import Help from './components/Help.vue'
 import Contact from './components/Contact.vue'
-import GoogleMap from "./components/Map";
 
 import json from './json/data.json'
 
@@ -51,12 +63,14 @@ export default {
   components: {
     About,
     Help,
-    Contact,
-    GoogleMap
+    Contact
   },
   data() {
     return {
-      json
+      json,
+      center: { lat: 50.2226782, lng: 18.9739298 },
+      zoom: 16,
+      markerPos: { lat: 50.2226782, lng: 18.9739298 }
     }
   }
 }
