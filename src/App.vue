@@ -30,6 +30,10 @@
       <br>
 
       <Contact v-bind:json='json.textToDisplay4'/>
+
+      <google-map />
+      <!--GmapMap :center="{ lat: 10, lng: 10 }"-->
+
     </b-container>
   </div>
 </template>
@@ -38,6 +42,7 @@
 import About from './components/About.vue'
 import Help from './components/Help.vue'
 import Contact from './components/Contact.vue'
+import GoogleMap from "./components/Map";
 
 import json from './json/data.json'
 
@@ -46,7 +51,8 @@ export default {
   components: {
     About,
     Help,
-    Contact
+    Contact,
+    GoogleMap
   },
   data() {
     return {
