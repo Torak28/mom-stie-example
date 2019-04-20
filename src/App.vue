@@ -3,18 +3,17 @@
 
     <b-container>
       <b-navbar :sticky="true" toggleable="md" type="light" class="nav-background">
-          <b-navbar-brand href="#"><img src="./assets/logoNavbar.png" alt="Logo"> Elżbieta Ciołek-Żelechowska, Psycholog</b-navbar-brand>
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-            <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav class="ml-auto">
-                <b-nav-item href="#About" v-scroll-to="{el: '#About', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
-                <b-nav-item href="#Help" v-scroll-to="{el: '#Help', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
-                <b-nav-item href="#Oferta" >Oferta</b-nav-item>
-                <b-nav-item href="#Contact" v-scroll-to="{el: '#Contact', offset: -170}">{{json.textToDisplay4.name}}</b-nav-item>
-            </b-navbar-nav>
-            </b-collapse>
-        </b-navbar>
+        <b-navbar-brand href="#"><img src="./assets/logoNavbar.png" alt="Logo"> Elżbieta Ciołek-Żelechowska, Psycholog</b-navbar-brand>
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#About" v-scroll-to="{el: '#About', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
+            <b-nav-item href="#Help" v-scroll-to="{el: '#Help', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
+            <b-nav-item href="#Oferta" v-scroll-to="{el: '#Ofer', offset: -170}">{{json.textToDisplay3.name}}</b-nav-item>
+            <b-nav-item href="#Contact" v-scroll-to="{el: '#Contact', offset: -170}">{{json.textToDisplay4.name}}</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
 
       <br>
       <br>
@@ -25,6 +24,11 @@
       <br>
 
       <Help v-bind:json='json.textToDisplay2'/>
+
+      <br>
+      <br>
+
+      <Ofer v-bind:json='json.textToDisplay3'/>
 
       <br>
       <br>
@@ -54,6 +58,7 @@
 <script>
 import About from './components/About.vue'
 import Help from './components/Help.vue'
+import Ofer from './components/Ofer.vue'
 import Contact from './components/Contact.vue'
 
 import json from './json/data.json'
@@ -63,6 +68,7 @@ export default {
   components: {
     About,
     Help,
+    Ofer,
     Contact
   },
   data() {
