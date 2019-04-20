@@ -11,10 +11,10 @@
           
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-              <b-nav-item href="#About" v-scroll-to="{el: '#About', offset: -170}">{{json.textToDisplay1.name}}</b-nav-item>
-              <b-nav-item href="#Help" v-scroll-to="{el: '#Help', offset: -170}">{{json.textToDisplay2.name}}</b-nav-item>
-              <b-nav-item href="#Oferta" v-scroll-to="{el: '#Ofer', offset: -170}">{{json.textToDisplay3.name}}</b-nav-item>
-              <b-nav-item href="#Contact" v-scroll-to="{el: '#Contact', offset: -170}">{{json.textToDisplay4.name}}</b-nav-item>
+              <b-nav-item href="#About" v-scroll-to="{el: '#About', offset: -210}">{{json.textToDisplay1.name}}</b-nav-item>
+              <b-nav-item href="#Help" v-scroll-to="{el: '#Help', offset: -210}">{{json.textToDisplay2.name}}</b-nav-item>
+              <b-nav-item href="#Oferta" v-scroll-to="{el: '#Ofer', offset: -210}">{{json.textToDisplay3.name}}</b-nav-item>
+              <b-nav-item href="#Contact" v-scroll-to="{el: '#Contact', offset: -210}">{{json.textToDisplay4.name}}</b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         </b-navbar>
@@ -48,6 +48,12 @@
         </gmap-marker>
       </gmap-map>
         
+    </b-row>
+
+    <b-row class='text-center'>
+      <b-col>
+        <small class="text-muted">© 2019, Jarek Ciołek-Żelechowski</small>
+      </b-col>
     </b-row>
 
     </b-container>
@@ -101,7 +107,4 @@ export default {
     min-height: 50px;
     margin: auto;
   }
-
-
-
 </style>

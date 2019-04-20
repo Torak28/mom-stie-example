@@ -57,7 +57,7 @@
             <b-col>
                 <h5>{{json.text1}}
                 <br>
-                <font-awesome-icon icon="envelope" /> {{json.text3}}
+                <font-awesome-icon icon="envelope" /> <b-link href="mailto:ezelechowska@poczta.onet.pl"> {{json.text3}} </b-link>
                 <br>
                 <font-awesome-icon icon="phone" /> {{json.text2}}
                 <br>
