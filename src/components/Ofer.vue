@@ -10,21 +10,21 @@
 
         <b-card-group deck>
             <b-card :title='json.text1' :img-src="require('../assets/therapy.png')" img-alt="Image" img-top>
-            <b-card-text>
+            <b-card-text class='text'>
                 {{json.text1FollowUp}}
             </b-card-text>
             <div slot="footer"><small class="text-muted">{{json.text1Footer}}</small></div>
             </b-card>
 
             <b-card :title='json.text2' :img-src="require('../assets/individual.png')" img-alt="Image" img-top>
-            <b-card-text>
+            <b-card-text  class='text'>
                 {{json.text2FollowUp}}
             </b-card-text>
             <div slot="footer"><small class="text-muted">{{json.text2Footer}}</small></div>
             </b-card>
 
             <b-card :title='json.text3' :img-src="require('../assets/group.png')" img-alt="Image" img-top>
-            <b-card-text>
+            <b-card-text  class='text'>
                 {{json.text3FollowUp}}
             </b-card-text>
             <div slot="footer"><small class="text-muted">{{json.text3Footer}}</small></div>

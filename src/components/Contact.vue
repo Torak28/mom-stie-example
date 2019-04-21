@@ -26,7 +26,7 @@
         <b-row>
             <b-col>
                 <b-form>
-                    <b-input id="Mail" placeholder="Mail"></b-input>
+                    <b-input id="Telefon" placeholder="Numer Telefonu"></b-input>
                 </b-form>
             </b-col>
         </b-row>
@@ -59,13 +59,43 @@
                 <br>
                 <font-awesome-icon icon="envelope" /> <b-link href="mailto:ezelechowska@poczta.onet.pl"> {{json.text3}} </b-link>
                 <br>
-                <font-awesome-icon icon="phone" /> {{json.text2}}
+                <font-awesome-icon icon="phone" /> {{json.text2}}</h5>
+            </b-col>
+        </b-row>
+        <br>
+        <br>
+        <b-row class='text'>
+            <b-col md='8' class='align-self-center'>
+                <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
+                    <gmap-marker :position.sync=markerPos1 :clickable="true"></gmap-marker>
+                    <gmap-marker :position.sync=markerPos2 :clickable="true"></gmap-marker>
+                    <gmap-marker :position.sync=markerPos3 :clickable="true"></gmap-marker>
+                    <gmap-marker :position.sync=markerPos4 :clickable="true"></gmap-marker>
+                </gmap-map>
+            </b-col>
+            <b-col md='4' class='text-center'>
                 <br>
                 <br>
                 <br>
-                {{json.text4}}
+                <h5>{{json.text4}}</h5>
+                {{json.text5}}
                 <br>
-                <font-awesome-icon icon="map-marker-alt" /> {{json.text5}}</h5>
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text6}}
+                <br>
+                <br>
+                {{json.text7}}
+                <br>
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text8}}
+                <br>
+                <br>
+                {{json.text9}}
+                <br>
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text10}}
+                <br>
+                <br>
+                {{json.text11}}
+                <br>
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text12}}
             </b-col>
         </b-row>
     </b-container>
@@ -74,7 +104,17 @@
 <script>
 export default {
     name: 'Contact',
-    props: ['json']
+    props: ['json'],
+    data() {
+        return {
+        center: { lat: 50.2226782, lng: 18.9739298 },
+        zoom: 10,
+        markerPos1: { lat: 50.231156, lng: 18.997150 },
+        markerPos2: { lat: 50.294132, lng: 18.654360 },
+        markerPos3: { lat: 50.254317, lng: 19.033358 },
+        markerPos4: { lat: 50.274189, lng: 18.861862 }
+        }
+  }
 }
 </script>
 

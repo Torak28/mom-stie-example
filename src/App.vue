@@ -42,15 +42,6 @@
     <br>
 
     <b-row class='text-center'>
-      <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
-        
-        <gmap-marker :position.sync=markerPos :clickable="true">
-        </gmap-marker>
-      </gmap-map>
-        
-    </b-row>
-
-    <b-row class='text-center'>
       <b-col>
         <small class="text-muted">© 2019, Jarek Ciołek-Żelechowski</small>
       </b-col>
@@ -86,8 +77,11 @@ export default {
     return {
       json,
       center: { lat: 50.2226782, lng: 18.9739298 },
-      zoom: 16,
-      markerPos: { lat: 50.2226782, lng: 18.9739298 }
+      zoom: 10,
+      markerPos1: { lat: 50.231156, lng: 18.997150 },
+      markerPos2: { lat: 50.294132, lng: 18.654360 },
+      markerPos3: { lat: 50.254317, lng: 19.033358 },
+      markerPos4: { lat: 50.274189, lng: 18.861862 }
     }
   }
 }
