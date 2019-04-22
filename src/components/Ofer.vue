@@ -17,10 +17,16 @@
                 <br>
                 <br>
                 <br>
-                <font-awesome-icon icon="question-circle" v-b-toggle.collapse-1 class="m-1"></font-awesome-icon>
+                <b-button
+                :class="showCollapseA ? 'collapsed' : null"
+                :aria-expanded="showCollapseA ? 'true' : 'false'"
+                @click="showCollapseA = !showCollapseA"
+                >
+                    <font-awesome-icon :icon="appIcon1" v-b-toggle.collapse-2 class="m-1" /> 
+                </b-button>
             </b-card-text>
             <b-card-text class='text-left'>
-                <b-collapse id="collapse-1">
+                <b-collapse id="A" v-model="showCollapseA" class='m-1'>
                     <b>{{json.text1CollPart}}</b> 
                     <li v-for="item in json.text1FollowDown" :key='item.text'>
                         {{item.text}}
@@ -36,10 +42,16 @@
             </b-card-text>
             <b-card-text class ='text-center'>
                 <br>
-                <font-awesome-icon icon="question-circle" v-b-toggle.collapse-1 class="m-1"></font-awesome-icon>
+                <b-button
+                :class="showCollapseB ? 'collapsed' : null"
+                :aria-expanded="showCollapseB ? 'true' : 'false'"
+                @click="showCollapseB = !showCollapseB"
+                >
+                    <font-awesome-icon :icon="appIcon2" v-b-toggle.collapse-2 class="m-1" /> 
+                </b-button>
             </b-card-text>
             <b-card-text class='text-left'>
-                <b-collapse id="collapse-1">
+                <b-collapse id="B" v-model="showCollapseB" class='m-1'>
                     <b>{{json.text2CollPart}}</b> 
                     <li v-for="item in json.text2FollowDown" :key='item.text'>
                         {{item.text}}
@@ -54,10 +66,16 @@
                 {{json.text3FollowUp}}
             </b-card-text>
             <b-card-text class ='text-center'>
-                <font-awesome-icon icon="question-circle" v-b-toggle.collapse-1 class="m-1"></font-awesome-icon>
+                <b-button
+                :class="showCollapseC ? 'collapsed' : null"
+                :aria-expanded="showCollapseC ? 'true' : 'false'"
+                @click="showCollapseC = !showCollapseC"
+                >
+                    <font-awesome-icon :icon="appIcon3" v-b-toggle.collapse-2 class="m-1" /> 
+                </b-button>
             </b-card-text>
             <b-card-text class='text-left'>
-                <b-collapse id="collapse-1">
+                <b-collapse id="C" v-model="showCollapseC" class='m-1'>
                     <b>{{json.text3CollPart}}</b> 
                     <li v-for="item in json.text3FollowDown" :key='item.text'>
                         {{item.text}}
@@ -74,9 +92,30 @@
 </template>
 
 <script>
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 export default {
     name: 'Ofer',
-    props: ['json']
+    props: ['json'],
+    data() {
+        return {
+            showCollapseA : false,
+            showCollapseB : false,
+            showCollapseC : false
+        }
+    },
+    computed: {
+        appIcon1() {
+            return this.showCollapseA ? faChevronRight : faChevronDown
+        },
+        appIcon2() {
+            return this.showCollapseB ? faChevronRight : faChevronDown
+        },
+        appIcon3() {
+            return this.showCollapseC ? faChevronRight : faChevronDown
+        },
+    }
 }
 </script>
 
