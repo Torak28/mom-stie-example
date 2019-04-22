@@ -78,22 +78,22 @@
                 <br>
                 <br>
                 <h5>{{json.text4}}</h5>
-                {{json.text5}}
+                <b>{{json.text5}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text6}}
                 <br>
                 <br>
-                {{json.text7}}
+                <b>{{json.text7}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text8}}
                 <br>
                 <br>
-                {{json.text9}}
+                <b>{{json.text9}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text10}}
                 <br>
                 <br>
-                {{json.text11}}
+                <b>{{json.text11}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text12}}
             </b-col>
