@@ -49,7 +49,11 @@
 
     </b-container>
     <footer>
-      <cookie-law :buttonText=json.cookieButton :message=json.cookieMessage theme="base"></cookie-law>
+      <cookie-law :buttonText=json.cookieButton theme="base">
+        <div slot="message">
+          Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie, po więcej informacji zapraszam do zapozaniania się z treścią <b-link href="#">Polityki Prywatności</b-link>! Ponadto Logo strony zostało zaprojektowane przez <b-link href="https://pl.freepik.com/darmowe-wektory/ręce-logo_795652.htm">Freepik.com</b-link>
+        </div>
+      </cookie-law>
     </footer>
   </div>
 </template>
