@@ -16,23 +16,17 @@
             </b-col>
             <b-col md='8' order='1' order-md='2'>
                 <h5 class='text-center'>W razie pytań pisz:</h5>
+                <b-alert :show=validateForm variant="danger">{{json.ValidateAlertMsg}}</b-alert>
+                <b-alert :show=success variant="success">{{json.SuccessAlertMsg}}</b-alert>
                 <b-row>
                     <b-col>
                         <b-form>
-                            <b-input id="Imie" placeholder="Imię"></b-input>
+                            <b-input id="Name" v-model='name' placeholder="Imię"></b-input>
                         </b-form>
                     </b-col>
                     <b-col>
                         <b-form>
-                            <b-input id="Nazwisko" placeholder="Nazwisko"></b-input>
-                        </b-form>
-                    </b-col>
-                </b-row>
-                <br>
-                <b-row>
-                    <b-col>
-                        <b-form>
-                            <b-input id="Telefon" placeholder="Numer Telefonu"></b-input>
+                            <b-input id="Surname" v-model='surname' placeholder="Nazwisko"></b-input>
                         </b-form>
                     </b-col>
                 </b-row>
@@ -40,14 +34,22 @@
                 <b-row>
                     <b-col>
                         <b-form>
-                            <b-form-textarea id="Wiadomosc" placeholder="Napisz tutaj swoją wiadomość" rows="4" no-resize></b-form-textarea>
+                            <b-input id="Phone" v-model='phone' placeholder="Numer Telefonu"></b-input>
+                        </b-form>
+                    </b-col>
+                </b-row>
+                <br>
+                <b-row>
+                    <b-col>
+                        <b-form>
+                            <b-form-textarea id="Msg" v-model='msg' placeholder="Napisz tutaj swoją wiadomość" rows="4" no-resize></b-form-textarea>
                         </b-form>
                     </b-col>
                 </b-row>
                 <br>
                 <b-row class='text-center'>
                     <b-col>
-                        <b-button block variant="primary">Wyślij</b-button>
+                        <b-button block variant="primary" v-on:click="sendEmail" ref="btnSend">Wyślij</b-button>
                     </b-col>
                 </b-row>
             </b-col>
@@ -97,14 +99,49 @@ export default {
     props: ['json'],
     data() {
         return {
-        center: { lat: 50.2226782, lng: 18.9739298 },
-        zoom: 10,
-        markerPos1: { lat: 50.231156, lng: 18.997150 },
-        markerPos2: { lat: 50.294132, lng: 18.654360 },
-        markerPos3: { lat: 50.254317, lng: 19.033358 },
-        markerPos4: { lat: 50.274189, lng: 18.861862 }
+            center: { lat: 50.2226782, lng: 18.9739298 },
+            zoom: 10,
+            markerPos1: { lat: 50.231156, lng: 18.997150 },
+            markerPos2: { lat: 50.294132, lng: 18.654360 },
+            markerPos3: { lat: 50.254317, lng: 19.033358 },
+            markerPos4: { lat: 50.274189, lng: 18.861862 },
+            name: '',
+            surname: '',
+            phone: '',
+            msg: '',
+            validateForm: false,
+            success: false
         }
-  }
+    },
+    methods: {
+        sendEmail() {
+            if(!this.name || !this.surname || !this.phone || !this.msg){
+                this.validateForm = true;
+            }else{
+                this.validateForm = false;
+                emailjs.init(this.json.user);
+
+                var service_id = this.json.service_id;
+                var template_id = this.json.template_id;
+                var template_params = {
+                    name: this.name,
+                    surname: this.surname,
+                    phone: this.phone,
+                    msg: this.msg
+                };
+
+                
+                emailjs.send(service_id,template_id,template_params).then(function(response) {
+                    this.success = true;
+                });
+
+                this.name = '';
+                this.surname = '';
+                this.phone = '';
+                this.msg = '';
+            }
+        },
+    }
 }
 </script>
 
