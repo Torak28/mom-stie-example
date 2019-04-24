@@ -12,7 +12,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import * as VueGoogleMaps from "vue2-google-maps";
+import * as VueGoogleMaps from "vue2-google-maps"
 import json from './json/secret.json'
 
 var VueScrollTo = require('vue-scrollto');
@@ -32,6 +32,9 @@ Vue.use(VueGoogleMaps, {
     libraries: "places"
   }
 });
+
+//import emailjs from 'emailjs-com'
+//Vue.use(emailjs);
 
 Vue.config.productionTip = false
 

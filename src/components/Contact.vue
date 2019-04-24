@@ -17,7 +17,6 @@
             <b-col md='8' order='1' order-md='2'>
                 <h5 class='text-center'>W razie pytań pisz:</h5>
                 <b-alert :show=validateForm variant="danger">{{json.ValidateAlertMsg}}</b-alert>
-                <b-alert :show=success variant="success">{{json.SuccessAlertMsg}}</b-alert>
                 <b-row>
                     <b-col>
                         <b-form>
@@ -109,9 +108,15 @@ export default {
             surname: '',
             phone: '',
             msg: '',
-            validateForm: false,
-            success: false
+            validateForm: false
         }
+    },
+    mounted () {
+        this.$nextTick(function () {
+        let emailJSscript = document.createElement('script')
+        emailJSscript.setAttribute('src', 'https://cdn.emailjs.com/sdk/2.2.4/email.min.js')
+        document.head.appendChild(emailJSscript)
+        })
     },
     methods: {
         sendEmail() {
@@ -131,9 +136,7 @@ export default {
                 };
 
                 
-                emailjs.send(service_id,template_id,template_params).then(function(response) {
-                    this.success = true;
-                });
+                emailjs.send(service_id,template_id,template_params);
 
                 this.name = '';
                 this.surname = '';
