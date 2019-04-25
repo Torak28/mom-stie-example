@@ -44,6 +44,8 @@
     <b-row class='text-center'>
       <b-col>
         <small class="text-muted">© 2019, Jarek Ciołek-Żelechowski</small>
+        <br>
+        <small><b-link href="https://ezelechowska-psycholog.pl/PolitykaPrywatnosci.pdf">Polityki Prywatności</b-link></small>
       </b-col>
     </b-row>
 
@@ -51,7 +53,7 @@
     <footer>
       <cookie-law :buttonText=json.cookieButton theme="base">
         <div slot="message">
-          Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie, po więcej informacji zapraszam do zapozaniania się z treścią <b-link href="#">Polityki Prywatności</b-link>! Ponadto Logo strony zostało zaprojektowane przez <b-link href="https://pl.freepik.com/darmowe-wektory/ręce-logo_795652.htm">Freepik.com</b-link>
+          Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie, po więcej informacji zapraszam do zapozaniania się z treścią <b-link href="https://ezelechowska-psycholog.pl/PolitykaPrywatnosci.pdf">Polityki Prywatności</b-link>! Ponadto Logo strony zostało zaprojektowane przez <b-link href="https://pl.freepik.com/darmowe-wektory/ręce-logo_795652.htm">Freepik.com</b-link>
         </div>
       </cookie-law>
     </footer>

@@ -55,6 +55,7 @@
         </b-row>
         <br>
         <br>
+        <br>
         <b-row class='text'>
             <b-col md='8' class='align-self-center'>
                 <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
