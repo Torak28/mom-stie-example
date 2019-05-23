@@ -61,7 +61,6 @@
                 <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
                     <gmap-marker :position.sync=markerPos1 :clickable="true"></gmap-marker>
                     <gmap-marker :position.sync=markerPos2 :clickable="true"></gmap-marker>
-                    <gmap-marker :position.sync=markerPos3 :clickable="true"></gmap-marker>
                     <gmap-marker :position.sync=markerPos4 :clickable="true"></gmap-marker>
                 </gmap-map>
             </b-col>
@@ -73,11 +72,6 @@
                 <b>{{json.text5}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text6}}
-                <br>
-                <br>
-                <b>{{json.text7}}</b>
-                <br>
-                <font-awesome-icon icon="map-marker-alt" /> {{json.text8}}
                 <br>
                 <br>
                 <b>{{json.text9}}</b>
@@ -103,7 +97,6 @@ export default {
             zoom: 10,
             markerPos1: { lat: 50.231156, lng: 18.997150 },
             markerPos2: { lat: 50.294132, lng: 18.654360 },
-            markerPos3: { lat: 50.254317, lng: 19.033358 },
             markerPos4: { lat: 50.274189, lng: 18.861862 },
             name: '',
             surname: '',
