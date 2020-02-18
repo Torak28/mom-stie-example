@@ -7,15 +7,10 @@
         </b-row>
         <br>
         <b-row>
-            <b-col align-self="center" md='4' order='2' order-md='1'>
-                <h5>{{json.text1}}
-                <br>
-                <font-awesome-icon icon="envelope" /> <b-link href="mailto:ezelechowska@poczta.onet.pl"> {{json.text3}} </b-link>
-                <br>
-                <font-awesome-icon icon="phone" /> {{json.text2}}</h5>
+            <b-col align-self="center" md='3' order='1' order-md='3'> 
             </b-col>
-            <b-col md='8' order='1' order-md='2'>
-                <h5 class='text-center'>W razie pytań pisz:</h5>
+            <b-col align-self="center" md='6' order='2' order-md='2'>
+                <!-- <h5 class='text-center'>W razie pytań pisz:</h5>
                 <b-alert :show=validateForm variant="danger">{{json.ValidateAlertMsg}}</b-alert>
                 <b-row>
                     <b-col>
@@ -50,7 +45,17 @@
                     <b-col>
                         <b-button block variant="primary" v-on:click="sendEmail" ref="btnSend">Wyślij</b-button>
                     </b-col>
-                </b-row>
+                </b-row> -->
+                <!-- Tutaj wchodzi znany lekarz-->
+                <a id="zl-url" class="zl-url" href="https://www.znanylekarz.pl/elzbieta-ciolek-zelechowska/psycholog/katowice" rel="nofollow" data-zlw-doctor="elzbieta-ciolek-zelechowska" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true">
+                    Elżbieta Ciołek-Żelechowska - ZnanyLekarz.pl
+                </a>
+                <br>
+                <h5>
+                    <center><font-awesome-icon icon="phone" /> {{json.text2}}</center>
+                </h5>
+            </b-col>
+            <b-col align-self="center" md='3' order='3' order-md='1'> 
             </b-col>
         </b-row>
         <br>
@@ -61,7 +66,6 @@
                 <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
                     <gmap-marker :position.sync=markerPos1 :clickable="true"></gmap-marker>
                     <gmap-marker :position.sync=markerPos2 :clickable="true"></gmap-marker>
-                    <gmap-marker :position.sync=markerPos4 :clickable="true"></gmap-marker>
                 </gmap-map>
             </b-col>
             <b-col md='4' class='text-center'>
@@ -77,11 +81,6 @@
                 <b>{{json.text9}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text10}}
-                <br>
-                <br>
-                <b>{{json.text11}}</b>
-                <br>
-                <font-awesome-icon icon="map-marker-alt" /> {{json.text12}}
             </b-col>
         </b-row>
     </b-container>
@@ -95,15 +94,26 @@ export default {
         return {
             center: { lat: 50.2226782, lng: 18.9739298 },
             zoom: 10,
-            markerPos1: { lat: 50.231156, lng: 18.997150 },
-            markerPos2: { lat: 50.294132, lng: 18.654360 },
-            markerPos4: { lat: 50.274189, lng: 18.861862 },
+            markerPos1: { lat: 50.274189, lng: 18.861862 },
+            markerPos2: { lat: 50.252883, lng: 19.012075 },
             name: '',
             surname: '',
             phone: '',
             msg: '',
             validateForm: false
         }
+    },
+    created: function () {
+        !function($_x,_s,id){
+            var js,fjs=$_x.getElementsByTagName(_s)[0];
+            if(!$_x.getElementById(id)){
+                js = $_x.createElement(_s);
+                js.id = id;
+                js.src = "//platform.docplanner.com/js/widget.js";
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }
+        (document,"script","zl-widget-s");
     },
     mounted () {
         this.$nextTick(function () {
