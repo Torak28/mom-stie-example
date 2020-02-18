@@ -112,8 +112,7 @@ export default {
                 js.src = "//platform.docplanner.com/js/widget.js";
                 fjs.parentNode.insertBefore(js,fjs);
             }
-        }
-        (document,"script","zl-widget-s");
+        }(document,"script","zl-widget-s");
     },
     mounted () {
         this.$nextTick(function () {
