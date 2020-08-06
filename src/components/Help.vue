@@ -7,7 +7,7 @@
         </b-row>
         <b-row>
             <b-col md='4' class='align-self-center'>
-                <img src="../assets/Przykład1.png" alt="Logo">
+                <img src="../assets/office.png" alt="Logo">
             </b-col>
             <b-col md='8' class='text'>
                  {{json.text1}}
