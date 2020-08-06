@@ -81,13 +81,7 @@ export default {
   },
   data() {
     return {
-      json,
-      center: { lat: 50.2226782, lng: 18.9739298 },
-      zoom: 10,
-      markerPos1: { lat: 50.231156, lng: 18.997150 },
-      markerPos2: { lat: 50.294132, lng: 18.654360 },
-      markerPos3: { lat: 50.254317, lng: 19.033358 },
-      markerPos4: { lat: 50.274189, lng: 18.861862 }
+      json
     }
   }
 }
