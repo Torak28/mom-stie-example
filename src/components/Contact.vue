@@ -10,43 +10,7 @@
             <b-col align-self="center" md='3' order='1' order-md='3'> 
             </b-col>
             <b-col align-self="center" md='6' order='2' order-md='2'>
-                <!-- <h5 class='text-center'>W razie pytań pisz:</h5>
-                <b-alert :show=validateForm variant="danger">{{json.ValidateAlertMsg}}</b-alert>
-                <b-row>
-                    <b-col>
-                        <b-form>
-                            <b-input id="Name" v-model='name' placeholder="Imię"></b-input>
-                        </b-form>
-                    </b-col>
-                    <b-col>
-                        <b-form>
-                            <b-input id="Surname" v-model='surname' placeholder="Nazwisko"></b-input>
-                        </b-form>
-                    </b-col>
-                </b-row>
                 <br>
-                <b-row>
-                    <b-col>
-                        <b-form>
-                            <b-input id="Phone" v-model='phone' placeholder="Numer Telefonu"></b-input>
-                        </b-form>
-                    </b-col>
-                </b-row>
-                <br>
-                <b-row>
-                    <b-col>
-                        <b-form>
-                            <b-form-textarea id="Msg" v-model='msg' placeholder="Napisz tutaj swoją wiadomość" rows="4" no-resize></b-form-textarea>
-                        </b-form>
-                    </b-col>
-                </b-row>
-                <br>
-                <b-row class='text-center'>
-                    <b-col>
-                        <b-button block variant="primary" v-on:click="sendEmail" ref="btnSend">Wyślij</b-button>
-                    </b-col>
-                </b-row> -->
-                <!-- Tutaj wchodzi znany lekarz-->
                 <a id="zl-url" class="zl-url" href="https://www.znanylekarz.pl/elzbieta-ciolek-zelechowska/psycholog/katowice" rel="nofollow" data-zlw-doctor="elzbieta-ciolek-zelechowska" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true">
                     Elżbieta Ciołek-Żelechowska - ZnanyLekarz.pl
                 </a>
@@ -95,7 +59,7 @@ export default {
             center: { lat: 50.2226782, lng: 18.9739298 },
             zoom: 10,
             markerPos1: { lat: 50.274189, lng: 18.861862 },
-            markerPos2: { lat: 50.252883, lng: 19.012075 },
+            markerPos2: { lat: 50.252806, lng: 19.012073 },
             name: '',
             surname: '',
             phone: '',
@@ -113,40 +77,6 @@ export default {
                 fjs.parentNode.insertBefore(js,fjs);
             }
         }(document,"script","zl-widget-s");
-    },
-    mounted () {
-        this.$nextTick(function () {
-        let emailJSscript = document.createElement('script')
-        emailJSscript.setAttribute('src', 'https://cdn.emailjs.com/sdk/2.2.4/email.min.js')
-        document.head.appendChild(emailJSscript)
-        })
-    },
-    methods: {
-        sendEmail() {
-            if(!this.name || !this.surname || !this.phone || !this.msg){
-                this.validateForm = true;
-            }else{
-                this.validateForm = false;
-                emailjs.init(this.json.user);
-
-                var service_id = this.json.service_id;
-                var template_id = this.json.template_id;
-                var template_params = {
-                    name: this.name,
-                    surname: this.surname,
-                    phone: this.phone,
-                    msg: this.msg
-                };
-
-                
-                emailjs.send(service_id,template_id,template_params);
-
-                this.name = '';
-                this.surname = '';
-                this.phone = '';
-                this.msg = '';
-            }
-        },
     }
 }
 </script>
