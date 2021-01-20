@@ -25,3 +25,4 @@ src/json
 
 #assets
 src/assets/*.png
+public/*.ico
