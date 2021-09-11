@@ -28,7 +28,7 @@
         <b-row class='text'>
             <b-col md='8' class='align-self-center'>
                 <gmap-map :center= "center" :zoom= "zoom" style="width:100%;  height: 600px;">
-                    <gmap-marker :position.sync=markerPos1 :clickable="true"></gmap-marker>
+                    <!-- <gmap-marker :position.sync=markerPos1 :clickable="true"></gmap-marker> -->
                     <gmap-marker :position.sync=markerPos2 :clickable="true"></gmap-marker>
                 </gmap-map>
             </b-col>
@@ -40,11 +40,11 @@
                 <b>{{json.text5}}</b>
                 <br>
                 <font-awesome-icon icon="map-marker-alt" /> {{json.text6}}
-                <br>
+                <!-- <br>
                 <br>
                 <b>{{json.text9}}</b>
                 <br>
-                <font-awesome-icon icon="map-marker-alt" /> {{json.text10}}
+                <font-awesome-icon icon="map-marker-alt" /> {{json.text10}} -->
             </b-col>
         </b-row>
     </b-container>
@@ -58,7 +58,7 @@ export default {
         return {
             center: { lat: 50.2226782, lng: 18.9739298 },
             zoom: 10,
-            markerPos1: { lat: 50.274189, lng: 18.861862 },
+            // markerPos1: { lat: 50.274189, lng: 18.861862 },
             markerPos2: { lat: 50.252806, lng: 19.012073 },
             name: '',
             surname: '',
