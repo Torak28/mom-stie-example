@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.16",
     "core-js": "^2.6.5",
     "emailjs-com": "^2.3.2",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "npm": "^6.14.6",
     "sitemap-generator": "^8.4.0",
     "vue": "^2.6.10",
